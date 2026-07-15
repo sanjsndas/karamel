@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Karamel Bread Whisper · the garden journal</title>
+  <meta name="description" content="A handcrafted authority blog where soil wisdom meets slow living. Cultivate, taste, and linger.">
+  <!-- fonts: premium serif + clean sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,300;7..72,400;7..72,500;7..72,600;7..72,700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fcf8f2;
+      color: #2b2520;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* brand identity */
+    :root {
+      --brand-wood: #8b6b4c;
+      --brand-honey: #d9b382;
+      --brand-caramel: #b47b56;
+      --brand-cream: #fcf6ed;
+      --brand-shadow: rgba(43, 37, 32, 0.06);
+      --brand-paper: #f7efe6;
+      --brand-accent: #a57c5c;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Literata', serif;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1f1a16;
+    }
+
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ---- unique navigation (folded ribbon) ---- */
+    .nav-ribbon {
+      padding: 1.75rem 0 1.2rem;
+      border-bottom: 1px solid rgba(139, 107, 76, 0.15);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      background: #fcf8f2;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      font-size: 2.1rem;
+      line-height: 1;
+      color: var(--brand-wood);
+      letter-spacing: -0.05em;
+    }
+
+    .logo-text {
+      font-family: 'Literata', serif;
+      font-weight: 600;
+      font-size: 1.7rem;
+      letter-spacing: -0.03em;
+      color: #1f1a16;
+      background: linear-gradient(135deg, #5f4a34, #8b6b4c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #8b7a6b;
+      margin-left: 0.25rem;
+      font-weight: 400;
+      background: none;
+      -webkit-text-fill-color: #8b7a6b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.3rem;
+      font-size: 0.9rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #3b322b;
+      border-bottom: 1.5px solid transparent;
+      padding-bottom: 0.2rem;
+      transition: border 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: var(--brand-honey);
+      color: #1f1a16;
+    }
+
+    /* ---- homepage architecture: "The Larder" ---- */
+    /* section 1: the larder intro — editorial spread */
+    .larder-scoop {
+      padding: 3.5rem 0 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 2.5rem;
+      align-items: start;
+      border-bottom: 2px dotted rgba(139, 107, 76, 0.2);
+    }
+
+    .larder-scoop h1 {
+      font-size: 3.8rem;
+      line-height: 1.1;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+    }
+
+    .larder-scoop h1 span {
+      display: block;
+      color: var(--brand-caramel);
+      font-weight: 400;
+      font-size: 1.8rem;
+      margin-top: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .larder-scoop p {
+      font-size: 1.2rem;
+      color: #4a4039;
+      max-width: 32rem;
+    }
+
+    .scoop-meta {
+      margin-top: 1.8rem;
+      display: flex;
+      gap: 2rem;
+      font-size: 0.9rem;
+      color: #6b5d52;
+      border-top: 1px solid #e5dbd1;
+      padding-top: 1.5rem;
+    }
+
+    /* section 2: the breadcrumb grid — category image + feature */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      padding: 3rem 0 3.5rem;
+      background: var(--brand-paper);
+      margin: 1.5rem 0 2rem;
+      border-radius: 48px 8px 48px 8px;
+      padding: 2.5rem 2.5rem;
+    }
+
+    .feature-grid .feature-card {
+      background: white;
+      border-radius: 32px 8px 32px 8px;
+      padding: 1.8rem 2rem 2.2rem;
+      box-shadow: 0 12px 28px var(--brand-shadow);
+    }
+
+    .feature-grid .feature-card h2 {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    .feature-grid .feature-card .category-tag {
+      background: var(--brand-honey);
+      color: #2b2520;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .category-image-block {
+      background: #dacfc4;
+      border-radius: 80px 8px 80px 8px;
+      min-height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200"><rect width="400" height="200" fill="%23dacfc4"/><circle cx="120" cy="100" r="52" fill="%23b47b56" opacity="0.3"/><path d="M240 70 L320 70 L300 130 L220 130 Z" fill="%238b6b4c" opacity="0.4"/><circle cx="340" cy="160" r="30" fill="%23d9b382" opacity="0.5"/></svg>');
+      background-size: cover;
+      background-blend-mode: overlay;
+      color: #2b2520;
+      font-family: 'Literata', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* section 3: latest + resources mashup (asymmetrical) */
+    .mashup-entries {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2.5rem;
+      padding: 2.8rem 0 3rem;
+    }
+
+    .entry-cluster {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+    }
+
+    .entry-cluster .card {
+      background: white;
+      padding: 1.8rem 1.5rem 2rem;
+      border-radius: 40px 8px 40px 8px;
+      box-shadow: 0 8px 18px var(--brand-shadow);
+      transition: all 0.2s;
+    }
+
+    .entry-cluster .card:nth-child(1) {
+      border-radius: 8px 40px 8px 40px;
+      background: #faf3e9;
+      box-shadow: 0 12px 24px rgba(43, 37, 32, 0.04);
+    }
+
+    .entry-cluster .card:nth-child(2) {
+      background: #fcf8f2;
+      border: 1px solid #e8ddd2;
+      border-radius: 60px 8px 60px 8px;
+    }
+
+    .card .meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #7a6b5e;
+      border-bottom: 1px solid #e6dbd0;
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #4a4039;
+      margin-top: 0.5rem;
+    }
+
+    .resource-side {
+      background: #efebe6;
+      padding: 2rem 1.8rem;
+      border-radius: 120px 8px 120px 8px;
+      align-self: start;
+    }
+
+    .resource-side h3 {
+      font-size: 1.7rem;
+      font-weight: 400;
+      border-bottom: 2px solid var(--brand-caramel);
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.5rem;
+      width: fit-content;
+    }
+
+    .resource-side ul {
+      list-style: none;
+      font-size: 1rem;
+    }
+
+    .resource-side li {
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed rgba(139, 107, 76, 0.2);
+      display: flex;
+      gap: 0.8rem;
+      align-items: baseline;
+    }
+
+    .resource-side li::before {
+      content: "✦";
+      color: var(--brand-caramel);
+      font-size: 0.8rem;
+    }
+
+    /* section 4: narrative infographic + longform teaser */
+    .narrative-duo {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2.5rem;
+      background: #f7efe6;
+      padding: 2.5rem 2.5rem;
+      border-radius: 120px 8px 120px 8px;
+      margin: 1.5rem 0 3rem;
+    }
+
+    .narrative-duo .longform-preview {
+      background: white;
+      padding: 2rem;
+      border-radius: 80px 8px 80px 8px;
+    }
+
+    .narrative-duo .longform-preview h2 {
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
+
+    .narrative-duo .longform-preview p {
+      margin: 1rem 0 1.2rem;
+    }
+
+    .infographic-block {
+      background: #dacfc4;
+      border-radius: 40px 8px 40px 8px;
+      min-height: 200px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240"><rect width="400" height="240" fill="%23dacfc4"/><circle cx="80" cy="80" r="42" fill="%23b47b56" opacity="0.25"/><path d="M160 180 L320 180 L280 60 L200 60 Z" fill="%238b6b4c" opacity="0.3"/><rect x="20" y="20" width="40" height="180" fill="%23d9b382" opacity="0.3"/></svg>');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* footer — handcrafted */
+    .footer-crafted {
+      margin-top: 4rem;
+      padding: 3.5rem 0 2.5rem;
+      border-top: 2px solid rgba(139, 107, 76, 0.2);
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+      gap: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-crafted .col h4 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6b5d52;
+      border-bottom: 1px solid #ded3c8;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-crafted a {
+      color: #3b322b;
+      text-decoration: none;
+      display: block;
+      padding: 0.25rem 0;
+    }
+
+    .footer-crafted a:hover {
+      color: var(--brand-wood);
+    }
+
+    .footer-crafted .copyright {
+      grid-column: 1 / -1;
+      border-top: 1px solid #e0d5ca;
+      padding-top: 2rem;
+      font-size: 0.8rem;
+      color: #7a6b5e;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    /* responsiveness */
+    @media (max-width: 900px) {
+      .larder-scoop { grid-template-columns: 1fr; gap: 0.8rem; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .mashup-entries { grid-template-columns: 1fr; }
+      .entry-cluster { grid-template-columns: 1fr; }
+      .narrative-duo { grid-template-columns: 1fr; }
+      .footer-crafted { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-ribbon { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+      .nav-links { flex-wrap: wrap; gap: 1.2rem; }
+      .larder-scoop h1 { font-size: 2.8rem; }
+    }
+
+    /* utility */
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--brand-wood);
+      padding: 0.5rem 1.5rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: var(--brand-wood);
+      transition: 0.2s;
+      cursor: default;
+      display: inline-block;
+      margin-top: 0.8rem;
+    }
+    .btn-ghost:hover {
+      background: var(--brand-wood);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- navigation: folded ribbon -->
+  <nav class="nav-ribbon">
+    <a href="#" class="logo">
+      <span class="logo-icon">𖦹</span>
+      <span class="logo-text">Karamel Bread</span>
+      <span class="logo-sub">whisper</span>
+    </a>
+    <div class="nav-links">
+      <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li>
+					 <li><a href="categories.html">CATEGORIES</a></li>
+					<li><a href="disclamier.html">DISCLAMIER</a></li>
+    </div>
+  </nav>
+
+  <!-- homepage: larder scoop (editorial) -->
+  <section class="larder-scoop">
+    <div>
+      <h1>The soil speaks <span>— we translate.</span></h1>
+      <p>Karamel Bread Whisper is a slow-garden authority. We trade speed for depth, compost for chemicals, and flavour for the soul.</p>
+      <div class="scoop-meta">
+        <span>🍞 12 min read</span>
+        <span>✧ 2026 · harvest</span>
+        <span>📖 8 articles</span>
+      </div>
+    </div>
+    <div style="background: #e8ddd2; border-radius: 120px 8px 120px 8px; padding: 2rem 1.8rem; min-height: 140px; background-image: radial-gradient(circle at 10% 30%, #d9b38230 0%, transparent 60%); display: flex; align-items: center; justify-content: center; font-family: 'Literata', serif; font-size: 1.3rem; color: #3b322b;">“The best fertiliser is the gardener’s shadow.”</div>
+  </section>
+
+  <!-- feature grid: category image + featured article -->
+  <section class="feature-grid">
+    <div class="feature-card">
+      <span class="category-tag">⟡ Fermentation · soil</span>
+      <h2>Bread &amp; the mycelial network</h2>
+      <p style="margin: 0.8rem 0 1.2rem;">How wild yeast and fungal bridges turn your garden into a living pantry. A deep-dive into the underground economy.</p>
+      <div style="display: flex; gap: 0.8rem; align-items: center;">
+        <span style="font-size: 0.8rem;">by Elara Moss</span>
+        <span style="background: #d9b38240; padding: 0.1rem 0.8rem; border-radius: 40px;">featured</span>
+        <span style="margin-left: auto;">⏳ 12 min</span>
+      </div>
+    </div>
+    <div class="category-image-block">
+      <span style="background: rgba(255,255,240,0.6); padding: 0.4rem 1.8rem; border-radius: 60px;">category ·  larder</span>
+    </div>
+  </section>
+
+  <!-- mashup: latest entries + resource sidebar -->
+  <section class="mashup-entries">
+    <div class="entry-cluster">
+      <div class="card">
+        <div class="meta">↠  latest ·  july 15</div>
+        <h3>Kombucha meets compost tea</h3>
+        <p>A side-by-side comparison of active cultures and soil drenches. </p>
+        <div style="margin-top: 1.2rem; font-size: 0.8rem; color: #6b5d52;">by T. Oakes · 8 min read</div>
+      </div>
+      <div class="card">
+        <div class="meta">↠  deep read ·  june 28</div>
+        <h3>The whisper of caramelised roots</h3>
+        <p>Par-cooking root veg before planting? The caramelisation theory tested.</p>
+        <div style="margin-top: 1.2rem; font-size: 0.8rem; color: #6b5d52;">by F. Niwashi · 18 min</div>
+      </div>
+      <div class="card" style="grid-column: 1 / -1; border-radius: 200px 8px 200px 8px; background: #f7efe6;">
+        <div class="meta">⏳  evergreens</div>
+        <h3>8 mistakes we made with heirloom grains</h3>
+        <p>From sowing to sourdough — a confessional with actionable fixes.</p>
+        <div style="display: flex; gap: 1.2rem; margin-top: 0.6rem;"><span>📊 infographic inside</span><span>⭐ 4.9</span></div>
+      </div>
+    </div>
+    <aside class="resource-side">
+      <h3>✦  larder library</h3>
+      <ul>
+        <li>Soil almanac · 2026</li>
+        <li>Bread &amp; bacteria</li>
+        <li>Fermentation calendar</li>
+        <li>Compost black book</li>
+        <li>Grain varietals map</li>
+        <li>⟡  podcast: sour &amp; soil</li>
+      </ul>
+      <div style="margin-top: 2rem; background: #dacfc4; border-radius: 80px 8px 80px 8px; padding: 1rem 1rem; text-align: center;">📘  resources ·  free guide</div>
+    </aside>
+  </section>
+
+  <!-- narrative duo: longform article preview + infographic -->
+  <section class="narrative-duo">
+    <div class="longform-preview">
+      <span style="background: #2b2520; color: #fcf8f2; padding: 0.2rem 1rem; border-radius: 40px; font-size: 0.7rem;">expert advice</span>
+      <h2>How to build a bread-worthy garden</h2>
+      <p>A step-by-step guide that connects soil ecology, grain selection, and the alchemy of slow fermentation. 2200 words of actionable knowledge.</p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid #ddd; padding-top: 1rem; margin-top: 0.8rem;">
+        <span>🌱  H2: Mycelial priming</span>
+        <span>🍞  H3: autolyse &amp; soil</span>
+        <span>📊  comparison: 4 grains</span>
+      </div>
+      <div class="btn-ghost">Read full →</div>
+    </div>
+    <div class="infographic-block">
+      <!-- infographic bg -->
+      <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #2b2520; font-family: 'Literata', serif; font-size: 1.2rem; background: rgba(255,255,240,0.2); padding: 1rem;">🌾  infographic: grain-to-loaf cycle</div>
+    </div>
+  </section>
+
+  <!-- footer: handcrafted with many pages -->
+  <footer class="footer-crafted">
+    <div class="col">
+      <h4>Karamel Bread Whisper</h4>
+      <p style="margin-bottom: 0.8rem; color: #4a4039;">Authority gardening &amp; slow living. Est. 2024.</p>
+      <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+        <a href="#">about</a> <a href="#">authors</a> <a href="#">contact</a>
+      </div>
+    </div>
+    <div class="col">
+      <h4>read</h4>
+      <a href="#">blog</a> <a href="#">archive</a> <a href="#">resources</a> <a href="#">faq</a>
+    </div>
+    <div class="col">
+      <h4>legal</h4>
+      <a href="#">privacy</a> <a href="#">terms</a> <a href="#">cookies</a> <a href="#">disclaimer</a> <a href="#">editorial policy</a>
+    </div>
+    <div class="col">
+      <h4>stay</h4>
+      <a href="#">sitemap</a> <a href="#">newsletter</a> <a href="#">podcast</a>
+    </div>
+    <div class="copyright">
+      © 2026 Karamel Bread Whisper ·  handcrafted with soil &amp; ink. All rights reserved.
+    </div>
+  </footer>
+
+</div>
+<!-- end container -->
+
+</body>
+</html>

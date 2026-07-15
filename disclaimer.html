@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Disclaimer · Karamel Bread Whisper</title>
+  <meta name="description" content="Disclaimer for Karamel Bread Whisper — gardening, bread, slow living, and thoughtful content.">
+  <!-- fonts: premium serif + clean sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,300;7..72,400;7..72,500;7..72,600;7..72,700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fcf8f2;
+      color: #2b2520;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --brand-wood: #8b6b4c;
+      --brand-honey: #d9b382;
+      --brand-caramel: #b47b56;
+      --brand-cream: #fcf6ed;
+      --brand-shadow: rgba(43, 37, 32, 0.06);
+      --brand-paper: #f7efe6;
+      --brand-accent: #a57c5c;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Literata', serif;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1f1a16;
+    }
+
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ---- navigation (folded ribbon) ---- */
+    .nav-ribbon {
+      padding: 1.75rem 0 1.2rem;
+      border-bottom: 1px solid rgba(139, 107, 76, 0.15);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      background: #fcf8f2;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      font-size: 2.1rem;
+      line-height: 1;
+      color: var(--brand-wood);
+      letter-spacing: -0.05em;
+    }
+
+    .logo-text {
+      font-family: 'Literata', serif;
+      font-weight: 600;
+      font-size: 1.7rem;
+      letter-spacing: -0.03em;
+      color: #1f1a16;
+      background: linear-gradient(135deg, #5f4a34, #8b6b4c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #8b7a6b;
+      margin-left: 0.25rem;
+      font-weight: 400;
+      background: none;
+      -webkit-text-fill-color: #8b7a6b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.3rem;
+      font-size: 0.9rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #3b322b;
+      border-bottom: 1.5px solid transparent;
+      padding-bottom: 0.2rem;
+      transition: border 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: var(--brand-honey);
+      color: #1f1a16;
+    }
+
+    .nav-links a.active-disclaimer {
+      border-bottom-color: var(--brand-honey);
+      color: #1f1a16;
+    }
+
+    /* ---- page hero (disclaimer) ---- */
+    .page-hero {
+      padding: 2.5rem 0 1.5rem;
+      border-bottom: 2px dotted rgba(139, 107, 76, 0.2);
+      margin-bottom: 2rem;
+    }
+
+    .page-hero h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+    }
+
+    .page-hero p {
+      font-size: 1.1rem;
+      color: #4a4039;
+      max-width: 40rem;
+      margin-top: 0.5rem;
+    }
+
+    /* ---- disclaimer content (card) ---- */
+    .disclaimer-card {
+      background: white;
+      border-radius: 60px 8px 60px 8px;
+      padding: 2.5rem 3rem;
+      box-shadow: 0 8px 24px var(--brand-shadow);
+      border: 1px solid #e5dbd1;
+      margin: 2rem 0 3rem;
+    }
+
+    .disclaimer-card h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-top: 1.8rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .disclaimer-card h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .disclaimer-card p {
+      margin-bottom: 1.2rem;
+      color: #2e2823;
+      max-width: 48rem;
+    }
+
+    .disclaimer-card ul {
+      margin: 0.5rem 0 1.5rem 1.8rem;
+      color: #2e2823;
+    }
+
+    .disclaimer-card ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .disclaimer-card .highlight-box {
+      background: var(--brand-paper);
+      padding: 1.2rem 2rem;
+      border-radius: 60px 8px 60px 8px;
+      border-left: 6px solid var(--brand-honey);
+      margin: 1.8rem 0 1.2rem;
+    }
+
+    .disclaimer-card .highlight-box p {
+      margin-bottom: 0.2rem;
+    }
+
+    .disclaimer-card .small-meta {
+      font-size: 0.85rem;
+      color: #6b5d52;
+      border-top: 1px solid #eee5db;
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .btn-ghost-sm {
+      background: transparent;
+      border: 1px solid var(--brand-wood);
+      padding: 0.2rem 1.2rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 0.75rem;
+      color: var(--brand-wood);
+      transition: 0.2s;
+      cursor: default;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    /* ---- footer (same as homepage) ---- */
+    .footer-crafted {
+      margin-top: 4rem;
+      padding: 3.5rem 0 2.5rem;
+      border-top: 2px solid rgba(139, 107, 76, 0.2);
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+      gap: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-crafted .col h4 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6b5d52;
+      border-bottom: 1px solid #ded3c8;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-crafted a {
+      color: #3b322b;
+      text-decoration: none;
+      display: block;
+      padding: 0.25rem 0;
+    }
+
+    .footer-crafted a:hover {
+      color: var(--brand-wood);
+    }
+
+    .footer-crafted .copyright {
+      grid-column: 1 / -1;
+      border-top: 1px solid #e0d5ca;
+      padding-top: 2rem;
+      font-size: 0.8rem;
+      color: #7a6b5e;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    /* responsiveness */
+    @media (max-width: 900px) {
+      .footer-crafted { grid-template-columns: 1fr 1fr; }
+      .disclaimer-card { padding: 2rem 1.5rem; }
+    }
+    @media (max-width: 600px) {
+      .nav-ribbon { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+      .nav-links { flex-wrap: wrap; gap: 1.2rem; }
+      .page-hero h1 { font-size: 2.6rem; }
+      .footer-crafted { grid-template-columns: 1fr; }
+      .disclaimer-card { padding: 1.8rem 1rem; }
+      .disclaimer-card .highlight-box { padding: 1rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- navigation: identical to categories + active disclaimer -->
+  <nav class="nav-ribbon">
+    <a href="#" class="logo">
+      <span class="logo-icon">𖦹</span>
+      <span class="logo-text">Karamel Bread</span>
+      <span class="logo-sub">whisper</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+      <a href="categories.html">CATEGORIES</a>
+      <a href="disclamier.html" class="active-disclaimer">DISCLAMIER</a>
+    </div>
+  </nav>
+
+  <!-- page hero -->
+  <section class="page-hero">
+    <h1>Disclaimer</h1>
+    <p>Transparency, honesty, and a pinch of humility — read how we approach content, advice, and affiliate relationships.</p>
+  </section>
+
+  <!-- disclaimer full content -->
+  <div class="disclaimer-card">
+
+    <h2>General information</h2>
+    <p>All content on <strong>Karamel Bread Whisper</strong> is published for informational and educational purposes only. We are gardeners, bakers, and slow-living enthusiasts — not doctors, lawyers, or certified financial advisors. The views expressed are our own and based on personal experience, research, and a deep love for soil and sourdough.</p>
+
+    <div class="highlight-box">
+      <p><span style="font-weight: 600;">🌾  Nothing on this site replaces professional advice.</span> Always consult a qualified expert before making decisions about health, nutrition, gardening chemicals, or legal matters.</p>
+    </div>
+
+    <h2>Affiliate &amp; advertising</h2>
+    <p>Some links on this site are affiliate links. If you click through and make a purchase, we may earn a small commission at no extra cost to you. We only recommend products we genuinely use or believe in — though we cannot guarantee your experience. Sponsored content will always be clearly disclosed.</p>
+
+    <h2>Accuracy &amp; responsibility</h2>
+    <p>We strive to provide accurate, up-to-date information, but gardening and baking are ever-changing arts. Weather, soil conditions, ingredient variations, and human error mean that results may differ. We are not liable for any loss, damage, or injury arising from the use of our content. Use common sense and your own judgment.</p>
+
+    <ul>
+      <li><strong>Recipes:</strong> Always double-check temperatures, ingredient substitutions, and allergies.</li>
+      <li><strong>Gardening tips:</strong> Local climate and soil type greatly affect outcomes. Test before you plant.</li>
+      <li><strong>Foraging &amp; herbs:</strong> Never consume wild plants unless you are 100% certain of identification.</li>
+    </ul>
+
+    <h2>External links</h2>
+    <p>We link to external websites for convenience and further reading. We do not control or endorse these sites and are not responsible for their content, privacy practices, or accuracy.</p>
+
+    <h2>Updates to this disclaimer</h2>
+    <p>This disclaimer may be updated occasionally. The latest version will always be available on this page. Last revised: <span style="font-weight: 500;">July 2026</span>.</p>
+
+    <div class="small-meta">
+      <span>𖦹  Karamel Bread Whisper ·  handcrafted with care</span>
+      <span class="btn-ghost-sm" style="cursor: default;">v.1.2</span>
+    </div>
+
+  </div>
+
+  <!-- small extra: back to categories hint -->
+  <div style="text-align: center; margin: 0.5rem 0 2rem;">
+    <span style="background: white; padding: 0.3rem 2rem; border-radius: 60px; border: 1px solid #e5dbd1; font-size: 0.9rem; color: #5f4a34;">
+      <a href="categories.html" style="text-decoration: none; color: #5f4a34;">‹ browse all categories</a>
+    </span>
+  </div>
+
+  <!-- footer: handcrafted with many pages -->
+  <footer class="footer-crafted">
+    <div class="col">
+      <h4>Karamel Bread Whisper</h4>
+      <p style="margin-bottom: 0.8rem; color: #4a4039;">Authority gardening &amp; slow living. Est. 2024.</p>
+      <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+        <a href="#">about</a> <a href="#">authors</a> <a href="#">contact</a>
+      </div>
+    </div>
+    <div class="col">
+      <h4>read</h4>
+      <a href="#">blog</a> <a href="#">archive</a> <a href="#">resources</a> <a href="#">faq</a>
+    </div>
+    <div class="col">
+      <h4>legal</h4>
+      <a href="#">privacy</a> <a href="#">terms</a> <a href="#">cookies</a> <a href="#">disclaimer</a> <a href="#">editorial policy</a>
+    </div>
+    <div class="col">
+      <h4>stay</h4>
+      <a href="#">sitemap</a> <a href="#">newsletter</a> <a href="#">podcast</a>
+    </div>
+    <div class="copyright">
+      © 2026 Karamel Bread Whisper ·  handcrafted with soil &amp; ink. All rights reserved.
+    </div>
+  </footer>
+
+</div>
+<!-- end container -->
+
+</body>
+</html>

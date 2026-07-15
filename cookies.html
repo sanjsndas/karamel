@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Cookies Policy · Karamel Bread Whisper</title>
+  <meta name="description" content="How we use cookies to nurture your browsing experience.">
+  <!-- fonts: premium serif + clean sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,300;7..72,400;7..72,500;7..72,600;7..72,700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <style>
+    /* ——— reset & base ——— */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fcf8f2;
+      color: #2b2520;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --brand-wood: #8b6b4c;
+      --brand-honey: #d9b382;
+      --brand-caramel: #b47b56;
+      --brand-cream: #fcf6ed;
+      --brand-shadow: rgba(43, 37, 32, 0.06);
+      --brand-paper: #f7efe6;
+      --brand-accent: #a57c5c;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Literata', serif;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1f1a16;
+    }
+
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ——— navigation (folded ribbon) ——— */
+    .nav-ribbon {
+      padding: 1.75rem 0 1.2rem;
+      border-bottom: 1px solid rgba(139, 107, 76, 0.15);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      background: #fcf8f2;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      font-size: 2.1rem;
+      line-height: 1;
+      color: var(--brand-wood);
+      letter-spacing: -0.05em;
+    }
+
+    .logo-text {
+      font-family: 'Literata', serif;
+      font-weight: 600;
+      font-size: 1.7rem;
+      letter-spacing: -0.03em;
+      color: #1f1a16;
+      background: linear-gradient(135deg, #5f4a34, #8b6b4c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #8b7a6b;
+      margin-left: 0.25rem;
+      font-weight: 400;
+      background: none;
+      -webkit-text-fill-color: #8b7a6b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.3rem;
+      font-size: 0.9rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #3b322b;
+      border-bottom: 1.5px solid transparent;
+      padding-bottom: 0.2rem;
+      transition: border 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: var(--brand-honey);
+      color: #1f1a16;
+    }
+    
+    .nav-links li {
+      list-style: none;
+    }
+
+    /* ——— cookies hero ——— */
+    .cookies-hero {
+      padding: 3rem 0 2.5rem;
+      border-bottom: 2px dotted rgba(139, 107, 76, 0.2);
+      margin-bottom: 2rem;
+    }
+
+    .cookies-hero h1 {
+      font-size: 3.6rem;
+      line-height: 1.1;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+    }
+
+    .cookies-hero h1 span {
+      display: block;
+      color: var(--brand-caramel);
+      font-weight: 400;
+      font-size: 1.8rem;
+      margin-top: 0.3rem;
+      letter-spacing: -0.02em;
+    }
+
+    .cookies-hero p {
+      font-size: 1.2rem;
+      color: #4a4039;
+      max-width: 32rem;
+    }
+
+    /* ——— cookies content ——— */
+    .cookies-content {
+      background: white;
+      border-radius: 48px 8px 48px 8px;
+      padding: 2.5rem 2.8rem;
+      box-shadow: 0 12px 28px var(--brand-shadow);
+      margin-bottom: 4rem;
+    }
+
+    .cookies-content h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: var(--brand-wood);
+    }
+
+    .cookies-content h3 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      color: #3b322b;
+    }
+
+    .cookies-content p {
+      margin-bottom: 1rem;
+      color: #4a4039;
+    }
+
+    .cookies-content ul {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+      color: #4a4039;
+    }
+
+    .cookies-content ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .cookies-content .last-updated {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5dbd1;
+      font-size: 0.9rem;
+      color: #6b5d52;
+      font-style: italic;
+    }
+
+    /* ——— footer ——— */
+    .footer-crafted {
+      margin-top: 1rem;
+      padding: 3.5rem 0 2.5rem;
+      border-top: 2px solid rgba(139, 107, 76, 0.2);
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+      gap: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-crafted .col h4 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6b5d52;
+      border-bottom: 1px solid #ded3c8;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-crafted a {
+      color: #3b322b;
+      text-decoration: none;
+      display: block;
+      padding: 0.25rem 0;
+    }
+
+    .footer-crafted a:hover {
+      color: var(--brand-wood);
+    }
+
+    .footer-crafted .copyright {
+      grid-column: 1 / -1;
+      border-top: 1px solid #e0d5ca;
+      padding-top: 2rem;
+      font-size: 0.8rem;
+      color: #7a6b5e;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    /* ——— responsive ——— */
+    @media (max-width: 900px) {
+      .footer-crafted { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-ribbon { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+      .nav-links { flex-wrap: wrap; gap: 1.2rem; }
+      .cookies-hero h1 { font-size: 2.8rem; }
+      .cookies-content { padding: 1.8rem; }
+      .footer-crafted { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- navigation: folded ribbon -->
+  <nav class="nav-ribbon">
+    <a href="#" class="logo">
+      <span class="logo-icon">𖦹</span>
+      <span class="logo-text">Karamel Bread</span>
+      <span class="logo-sub">whisper</span>
+    </a>
+    <div class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+      <li><a href="categories.html">CATEGORIES</a></li>
+      <li><a href="disclamier.html">DISCLAMIER</a></li>
+    </div>
+  </nav>
+
+  <!-- cookies hero -->
+  <section class="cookies-hero">
+    <div>
+      <h1>Cookies Policy <span>— small crumbs, big care.</span></h1>
+      <p>We use cookies to make your visit sweeter, just like a gentle breeze through the garden. Here's everything you need to know.</p>
+    </div>
+  </section>
+
+  <!-- cookies content -->
+  <section class="cookies-content">
+    <h2>Our Cookie Philosophy</h2>
+    <p>At Karamel Bread Whisper, we believe in transparency. This Cookies Policy explains what cookies are, how we use them, and how you can manage your preferences. By continuing to browse our site, you agree to our use of cookies as described in this policy.</p>
+
+    <h3>1. What Are Cookies?</h3>
+    <p>Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the site owners.</p>
+    <p>Cookies help us remember your preferences, understand how you interact with our content, and improve your overall experience. They are not used to collect personal information without your explicit consent.</p>
+
+    <h3>2. How We Use Cookies</h3>
+    <p>We use cookies for a variety of purposes, including:</p>
+    <ul>
+      <li><strong>Essential cookies:</strong> These are necessary for the website to function properly. They enable core features like security, network management, and accessibility.</li>
+      <li><strong>Preference cookies:</strong> These remember your choices, such as language or region, so we can provide a more personalized experience.</li>
+      <li><strong>Analytics cookies:</strong> We use these to gather anonymous data about how visitors use our site. This helps us improve our content and understand which pages are most popular.</li>
+      <li><strong>Marketing cookies:</strong> These may be used to deliver relevant advertisements and track the effectiveness of our campaigns. We only use these with your prior consent.</li>
+    </ul>
+
+    <h3>3. Types of Cookies We Use</h3>
+    <ul>
+      <li><strong>Session cookies:</strong> Temporary cookies that are erased when you close your browser. They help us track your activity during a single visit.</li>
+      <li><strong>Persistent cookies:</strong> These remain on your device for a set period or until you delete them. They allow us to remember your preferences for future visits.</li>
+      <li><strong>First-party cookies:</strong> Set directly by us to enhance your experience on our website.</li>
+      <li><strong>Third-party cookies:</strong> These are placed by external services we use, such as analytics providers or social media platforms. We do not control these cookies, but we ensure they are used responsibly.</li>
+    </ul>
+
+    <h3>4. Your Cookie Choices</h3>
+    <p>You have the right to accept or reject cookies. Most web browsers automatically accept cookies, but you can modify your browser settings to decline cookies if you prefer. However, please note that disabling certain cookies may affect the functionality of our website.</p>
+    <p>Here’s how you can manage cookies in popular browsers:</p>
+    <ul>
+      <li><strong>Google Chrome:</strong> Settings → Privacy and security → Cookies and other site data.</li>
+      <li><strong>Mozilla Firefox:</strong> Options → Privacy & Security → Cookies and Site Data.</li>
+      <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data.</li>
+      <li><strong>Microsoft Edge:</strong> Settings → Privacy, search, and services → Cookies.</li>
+    </ul>
+    <p>You can also opt out of targeted advertising through platforms like the <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" style="color: var(--brand-wood);">Digital Advertising Alliance</a> or the <a href="https://www.youronlinechoices.com/" target="_blank" rel="noopener noreferrer" style="color: var(--brand-wood);">European Interactive Digital Advertising Alliance</a>.</p>
+
+    <h3>5. Third-Party Cookies &amp; Services</h3>
+    <p>We may use trusted third-party services that set their own cookies. For example, we use analytics providers to help us understand how our audience interacts with our content. These providers have their own privacy policies and we encourage you to review them.</p>
+    <p>We do not sell or share your personal data with third parties for their own marketing purposes without your explicit consent.</p>
+
+    <h3>6. Updates to This Policy</h3>
+    <p>We may update our Cookies Policy from time to time to reflect changes in technology, legislation, or our practices. We will always post the most current version on this page, with the effective date noted below. We encourage you to review this policy periodically.</p>
+
+    <h3>7. Contact Us</h3>
+    <p>If you have any questions about our use of cookies or this policy, please reach out to us:</p>
+    <ul>
+      <li><strong>Website:</strong> Karamel Bread Whisper</li>
+      <li><strong>Email:</strong> <a href="mailto:hello@karamelbread.whisper" style="color: var(--brand-wood);">hello@karamelbread.whisper</a></li>
+      <li><strong>Address:</strong> 47 Soil Lane, Harvestshire, HX3 9LF</li>
+    </ul>
+
+    <div class="last-updated">
+      This policy was last updated on: <strong>July 15, 2026</strong>
+    </div>
+  </section>
+
+  <!-- footer: handcrafted with many pages -->
+  <footer class="footer-crafted">
+    <div class="col">
+      <h4>Karamel Bread Whisper</h4>
+      <p style="margin-bottom: 0.8rem; color: #4a4039;">Authority gardening &amp; slow living. Est. 2024.</p>
+      <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+        <a href="about.html">about</a> <a href="#">authors</a> <a href="contact.html">contact</a>
+      </div>
+    </div>
+    <div class="col">
+      <h4>read</h4>
+      <a href="#">blog</a> <a href="#">archive</a> <a href="#">resources</a> <a href="#">faq</a>
+    </div>
+    <div class="col">
+      <h4>legal</h4>
+      <a href="privacy.html">privacy</a> <a href="terms.html">terms</a> <a href="cookies.html">cookies</a> <a href="disclamier.html">disclaimer</a> <a href="#">editorial policy</a>
+    </div>
+    <div class="col">
+      <h4>stay</h4>
+      <a href="#">sitemap</a> <a href="#">newsletter</a> <a href="#">podcast</a>
+    </div>
+    <div class="copyright">
+      © 2026 Karamel Bread Whisper ·  handcrafted with soil &amp; ink. All rights reserved.
+    </div>
+  </footer>
+
+</div>
+<!-- end container -->
+
+</body>
+</html>
